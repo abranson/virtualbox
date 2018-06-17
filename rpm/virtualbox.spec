@@ -245,7 +245,7 @@ depmod -a %{kernel_version}
 groupadd -r vboxsf || true
 
 %clean
-[ -d "%{buildroot}" -a "%{buildroot}" != "" ] && %__rm -rf "%{buildroot}"
+rm -rf $RPM_BUILD_ROOT
 
 %files guest-tools
 %defattr(-, root, root)
